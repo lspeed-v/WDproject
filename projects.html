@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSpeed's Portfolio - Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logo">
+                </a>
+            </div>
+
+            <!-- Menu -->
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Social Media -->
+            <div class="social-icons">
+                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="img/discord.png" alt="Discord"></a>
+                <a href="#"><img src="img/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="img/youtube.png" alt="Youtube"></a>
+            </div>
+
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <section id="projects" class="home-section projects">
+            <div class="container">
+                <h2>My Projects</h2>
+    
+                <!-- Project 1 -->
+                <div class="project-block">
+                    <img src="img/python.jpg" alt="Python projects">
+                    <div class="project-content">
+                        <h3>Python projects</h3>
+                        <p>
+                            - WOLT and GLOVO Parser: This project provides seamless API integration for virtually any application related to restaurants and the food service industry. It allows developers to retrieve comprehensive information about restaurants, including menus, through API requests. This parser enhances the capabilities of restaurant-related projects by offering up-to-date data and easy integration.
+                            <br>
+                            <br>
+                            - Google Maps Parser: An API project designed to fetch images and reviews of specific locations from Google Maps upon request. This tool enables applications to incorporate rich, location-based content, improving user experience by providing insightful information about places of interest.
+                            <br>
+                            <br>
+                            - Steam Skins AutoTrader: A complex system that enables fully automated trading of Steam skins. By leveraging the Steam API, this project automates the buying and selling process, allowing users to engage in the Steam marketplace efficiently without manual intervention.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- Project 2 -->
+                <div class="project-block">
+                    <img src="img/GD.jpg" alt="Game development">
+                    <div class="project-content">
+                        <h3>Game development</h3>
+                        <p>
+                            - LSpeed MTA Server. I created and developed an MTA (Multi Theft Auto) server that operated successfully from 2019 to 2022. This project showcased my skills in server management, gameplay design, and maintaining a vibrant player community over several years.
+                            <br>
+                            <br>
+                            - LSpeedV GTA5 Roleplay. An ambitious GTA5 Roleplay project that I worked on for over a year. Though unfinished, the project demonstrated my dedication and ability to manage large-scale development. It was later sold, reflecting its potential and value in the gaming community.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- Project 3 -->
+                <div class="project-block">
+                    <img src="img/3D.jpg" alt="3D Modelling">
+                    <div class="project-content">
+                        <h3>3D Modelling</h3>
+                        <p>
+                            I specialized in converting and enhancing 3D car models for popular games such as Assetto Corsa, GTA V, and GTA San Andreas. Leveraging advanced tools like Blender and 3ds Max, I meticulously optimized and refined models to ensure exceptional quality and seamless integration into the gaming environments.
+                            <br>
+                            <br>
+                            This work allowed me to combine technical precision with creative artistry, delivering visually stunning and highly detailed vehicle models that elevate the gaming experience.
+                        </p>
+                    </div>
+                </div>
+    
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Grigorii Lapin | 2023230016. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            themeToggle.textContent = document.body.classList.contains('light-theme') ? '☀️' : '🌙';
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".home-section");
+
+        const handleScroll = () => {
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top >= 0 && rect.top <= window.innerHeight) {
+                    section.classList.add("animate");
+                }
+            });
+        };
+
+        // Событие скролла
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Проверяем на загрузке страницы
+    });
+
+    </script>
+    
+</body>
+</html>

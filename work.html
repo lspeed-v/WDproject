@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSpeed's Portfolio - Work</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logo">
+                </a>
+            </div>
+
+            <!-- Menu -->
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Social Media -->
+            <div class="social-icons">
+                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="img/discord.png" alt="Discord"></a>
+                <a href="#"><img src="img/telegram.png" alt="Telegram"></a>
+                <a href="#"><img src="img/youtube.png" alt="Youtube"></a>
+            </div>
+
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <section id="work" class="work-section">
+            <div class="container">
+                <h2>My Work</h2>
+
+                <div class="work-content">
+                    <!-- Work Item 1 -->
+                    <div class="work-item">
+                        <img src="img/dinao.png" alt="Dinao">
+                        <img src="img/dinao2.png" alt="Dinao 2">
+                        <img src="img/qr.jpg" alt="Dinao 3">
+                        <div class="work-text">
+                            <h3>Dinao</h3>
+                            <p>
+                                Currently, I am an active Backend Developer for the Dinao project.
+                                <br>
+                                <br>
+                                I am responsible for the server-side functionality of the project, which includes parsing data, developing custom API integrations, managing the database, and much more. My role is to ensure seamless performance and scalability, providing users with a smooth and efficient experience.
+                                <br>
+                                <br>
+                                Dinao is an innovative application designed to help users discover the best places to visit, including restaurants and entertainment spots, in Belgrade and Novi Sad. The app allows users to search for locations based on their preferences, explore menus with high-quality dish photos, and read authentic reviews from other visitors.
+                                <br>
+                                <br>
+                                Currently, the app is available for download on the App Store, exclusively for iOS devices. Dinao aims to make finding the perfect spot for any occasion easier and more enjoyable than ever!
+                            </p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+</main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Grigorii Lapin | 2023230016. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            themeToggle.textContent = document.body.classList.contains('light-theme') ? '☀️' : '🌙';
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".home-section");
+
+        const handleScroll = () => {
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top >= 0 && rect.top <= window.innerHeight) {
+                    section.classList.add("animate");
+                }
+            });
+        };
+
+        // Событие скролла
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Проверяем на загрузке страницы
+    });
+
+    </script>
+    
+</body>
+</html>
